@@ -1,0 +1,40 @@
+package kitchen;
+
+public class Cup {
+	
+	private int capacity = 0;
+
+    private String liquidName;
+    private int liquidVolume;
+
+    public Cup(int liquidVolume, String liquidName) {
+    	setLiquid(liquidName);
+    	setVolume(liquidVolume);
+    }
+
+    public void setLiquid(String liquidName) {
+		if( liquidName.equals("Water") || liquidName.equals("Milk") || liquidName.equals("Tea") ) {
+			this.liquidName = liquidName;			
+		} else {
+			System.err.println("Error! The cup is not intended to store the liquid");
+			}
+	}
+	
+    public String getLiquid () {
+    	return liquidName;
+	} 
+    
+    public void setVolume(int liquidVolume) {
+		capacity += liquidVolume;
+		if(capacity >=0 && capacity <=600) {
+			this.liquidVolume += liquidVolume;
+			} else {
+				System.err.println("Error! The capacity does not allow this operation");
+				}
+	}
+    
+    public int getVolume () {
+    	return liquidVolume;
+	}     
+    
+}
