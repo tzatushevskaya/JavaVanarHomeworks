@@ -1,0 +1,24 @@
+package main;
+
+import kitchen.Cup;
+import kitchen.BigCup;
+
+public class Application {
+	
+	public static void main(String[] args) {
+		
+		Cup cupA = new Cup (300, "Milk");
+		Cup cupB = new Cup (500, "Water");
+		cupA.setVolume(-50);
+		cupB.setVolume(50);
+		
+		System.out.println("cupA contains " + cupA.getVolume() + " of " + cupA.getLiquid());
+		System.out.println("cupB contains " + cupB.getVolume() + " of " + cupB.getLiquid());	
+		
+		BigCup cupC = new BigCup (200, "Water");
+		cupC.setVolume(cupB.getVolume());
+		System.out.println("cupC contains " + cupC.getVolume() + " of " + cupC.getLiquid());
+		
+	}
+	
+}
