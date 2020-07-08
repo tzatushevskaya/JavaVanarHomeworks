@@ -1,0 +1,44 @@
+package auto;
+
+public class Transport {
+	
+	private String environment; //"air", "water", "underwater", "land", ...
+	
+	// default constructor
+	public Transport () {}
+	// parametrised constructor
+	public Transport (String environment) {
+		// protection mechanism if / else - switch / case
+		setEnvironment(environment);	
+	}
+		
+	public String getEnvironment() {
+		return environment;
+	}
+	
+	public void setEnvironment(String environment) {
+		String allowed[] = {"air", "water", "underwater", "land"};
+		for (int i=0; i < allowed.length; i++) {
+			if (allowed[i] == environment) {
+				this.environment = environment;
+				i = allowed.length;
+			} else {
+				System.out.println("Environment not allowed");
+				i = allowed.length;
+			}
+		}
+	}
+		
+	public void printInfo()	{
+		System.out.println("#############################");
+		if (environment != null) {
+			System.out.println( "Transport for " + environment);
+		}
+		else {
+			System.out.println( "Unknown environment!");	
+		}
+		System.out.println("#############################");
+	}
+	
+
+}
