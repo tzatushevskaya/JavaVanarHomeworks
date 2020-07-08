@@ -1,0 +1,29 @@
+package main;
+
+import auto.AutoTransport;
+import auto.AviaTransport;
+import auto.Transport;
+
+public class Application {
+
+	public static void main (String[] args) {
+		
+		// FORBIDDEN
+		// 1) private/protected
+		// 2) abstract super class
+		
+		Transport t = new Transport();
+		Transport avt = new AviaTransport();
+		Transport aut = new AutoTransport();
+		
+//		System.out.println(t.getEnvironment());
+//		System.out.println(t.getEnvironment());
+//		
+		t.printInfo();
+		avt.printInfo();
+		aut.printInfo();
+		t.setEnvironment("cosmos");
+		
+	}
+	
+}
