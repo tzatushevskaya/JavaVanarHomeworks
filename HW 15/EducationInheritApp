@@ -1,0 +1,15 @@
+public class EducationInheritApp{
+    public static void main(String[] args){
+
+		Educated educatedMan = new Educated("Educated Boy Name", 99, 9.5f, 80);
+		Pupil schoolMan = new Pupil("School Pupil Jacob", 6, 8.5f, 12, "Primary School");
+		Student universityMan = new Student("Student John", 30, 7.5f, 7, "Secondary School", "Oxford", "IT");
+		Master bigMan = new Master("Master person Jay", 33, 6.5f, 1, "Best School", "UTM", "FE"); 
+		
+		educatedMan.printInfo();
+		schoolMan.printInfo();
+		universityMan.printInfo();
+		bigMan.printInfo();
+    	
+    }
+}
