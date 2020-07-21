@@ -1,0 +1,29 @@
+package main;
+
+import fruits.Orange;
+import kitchen.Blender;
+import kitchen.Cup;
+import liquids.Juice;
+
+public class Application {
+	
+	public static void main(String[] args) {
+		
+		Orange smallOrange = new Orange(50); // HW1: 10 .. 1000 g
+		Orange mediumOrange = new Orange(100); // HW1: 10 .. 1000 g
+		Orange bigOrange = new Orange(200); // HW1: 10 .. 1000 g
+		
+		Blender cheapBlender = new Blender("F1rst");
+		
+		Juice juice = cheapBlender.makeJuice(smallOrange);
+		
+		Cup bigCup = new Cup();
+		bigCup.setContent( cheapBlender.makeJuice(smallOrange) );
+		bigCup.setContent( cheapBlender.makeJuice(mediumOrange) );		
+		
+		System.out.println( "We have " + bigCup.getContent().getVolume() + " ml");
+		
+		
+	}
+
+}
