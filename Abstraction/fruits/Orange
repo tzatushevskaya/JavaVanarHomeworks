@@ -1,0 +1,19 @@
+package fruits;
+
+// CONCRETE CLASS
+public class Orange {
+	
+	private int weight; // gramms
+	
+	public Orange() {}
+	public Orange (int weight) {
+		setWeight(weight);
+	}
+	public int getWeight() {
+		return weight;
+	}
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+}
