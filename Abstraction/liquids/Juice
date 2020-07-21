@@ -1,0 +1,23 @@
+package liquids;
+
+public class Juice {
+	
+	private double volume; //ml
+	
+	public Juice() {
+	}
+	
+	public Juice(double volume) {
+		setVolume(volume);
+	}
+
+	public double getVolume() {
+		return volume;
+	}
+
+	public void setVolume(double volume) {
+		this.volume = volume;
+	}
+	
+
+}
