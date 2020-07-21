@@ -1,0 +1,45 @@
+package kitchen;
+
+import fruits.Orange;
+import liquids.Juice;
+
+public class Blender {
+	
+	static double FRUITOJUICE = 0.6;
+	
+	private String brand;
+	
+	public Blender() {
+		
+	}
+	
+	public Blender(String brand) {
+		if( !brand.trim().equals("") ) {
+		setBrand(brand); // HW2: not "", not null
+		} else {
+			System.err.println("Error! The brand must not be empty.");
+		}
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	
+	// JavaDoc
+	/**
+	 * Returns a new object of Juice type taking an Orange object
+	 * @param orange - an object that represents a fruit
+	 * @return		 - an object of Juice type
+	 */
+	public Juice makeJuice(Orange orange) {
+		Juice juice = new Juice(orange.getWeight());
+		juice.setVolume(juice.getVolume()*FRUITOJUICE);
+		return juice;
+		
+	}
+
+}
