@@ -2,15 +2,11 @@ package robo;
 
 public class BetaRobot extends AlphaRobot{
 
-	private int x;
-	private int y;
 	private byte charge;
 	
 	public BetaRobot(String name, String model) {
 		super(name, model);
-		this.x = 0;
-		this.y = 0;
-		this.charge = 0;
+		setCharge(0);
 	}
 	
 	public void setCharge(int charge) {
@@ -27,9 +23,9 @@ public class BetaRobot extends AlphaRobot{
 	
 	@Override
 	public boolean moveRight() {
-		if (x <= 99 && charge>= 5) {
-			this.x+= 1;
-			if (x%2 == 0) this.charge-= 1;
+		if (getX() <= 99 && charge>= 5) {
+			setX(getX()+1);
+			if (getX()%2 == 0) setCharge(getCharge()-1);
 			return true;
 		} else {
 			return false;
@@ -38,9 +34,9 @@ public class BetaRobot extends AlphaRobot{
 	
 	@Override
 	public boolean moveLeft() {
-		if (x >= 1 && charge>= 5) {
-			this.x-= 1;
-			if (x%2 == 0) this.charge-= 1;
+		if (getX() >= 1 && charge>= 5) {
+			setX(getX()-1);
+			if (getX()%2 == 0) setCharge(getCharge()-1);
 			return true;
 		} else {
 			return false;
@@ -49,9 +45,9 @@ public class BetaRobot extends AlphaRobot{
 
 	@Override
 	public boolean moveDown() {
-		if (y <= 99 && charge>= 5) {
-			this.y+= 1;
-			if (y%2 == 0) this.charge-= 1;
+		if (getY() <= 99 && charge>= 5) {
+			setY(getY()+1);
+			if (getY()%2 == 0) setCharge(getCharge()-1);
 			return true;
 		} else {
 			return false;
@@ -60,9 +56,9 @@ public class BetaRobot extends AlphaRobot{
 
 	@Override
 	public boolean moveUp() {
-		if (y >= 1 && charge>= 5) {
-			this.y-= 1;
-			if (y%2 == 0) this.charge-= 1;
+		if (getY() >= 1 && charge>= 5) {
+			setY(getY()-1);
+			if (getY()%2 == 0) setCharge(getCharge()-1);
 			return true;
 		} else {
 			return false;

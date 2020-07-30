@@ -5,7 +5,7 @@ public class RobotFactory {
 	public static AbstractRobot getRobot(String model, String name) {
 		
 	      if(model.equals("alpha")){
-	         return new AlphaRobot();
+	         return new AlphaRobot(model, name);
 	         
 	      } else if(model.equals("beta")){
 	         return new BetaRobot(model, name);

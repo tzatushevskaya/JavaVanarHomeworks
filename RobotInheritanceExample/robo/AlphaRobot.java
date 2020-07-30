@@ -7,22 +7,21 @@ public class AlphaRobot extends AbstractRobot{
 	private int x;
 	private int y;
 	
-	
-	protected AlphaRobot() {}
+	//protected AlphaRobot() {}
 	
 	protected AlphaRobot(String name, String model) {
 		setName(name);
 		setModel(model);
-		this.x = 0;
-		this.y = 0;
+		setX(0);
+		setY(0);
 	}
 
 	@Override
 	public void setName(String name) {
-		if( name!=null) {
-			System.err.println("Empty value is not allowed for name.");
-		} else {
+		if( name!= null) {
 			this.name = name;
+		} else {
+			System.err.println("Empty value is not allowed for name.");
 		}
 	}
 
@@ -33,10 +32,10 @@ public class AlphaRobot extends AbstractRobot{
 
 	@Override
 	public void setModel(String model) {
-		if(model!=null ) {
-			System.err.println("Empty value is not allowed for model.");
-		} else {
+		if(model!= null ) {
 			this.model = model;
+		} else {
+			System.err.println("Empty value is not allowed for model.");
 		}	
 	}
 
