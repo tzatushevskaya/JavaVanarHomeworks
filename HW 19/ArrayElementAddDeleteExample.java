@@ -21,23 +21,17 @@ public class ArrayElementAddDeleteExample {
 		addElement(indexToInsert, man);
 		printArrayOfObjects();
 		
-		
-
-		
 	}
 	
 	static int[] data = {10,20,30,40,50};
 	static Person[] people = new Person[4];
 
-
-
-
-	public static void deleteElement(int index) {
+    public static void deleteElement(int index) {
 		int[] newData = new int[data.length - 1];
-		for (int i = 0; i < index; ++i) {
+		for (int i = 0; i < newData.length; i++) {
+			if (i<index)
 			newData[i] = data[i];
-		};
-		for (int i = index; i < data.length-1; ++i) {
+			else
 			newData[i] = data[i+1];
 		};
 		data = newData;
@@ -46,12 +40,13 @@ public class ArrayElementAddDeleteExample {
 	
 	public static void addElement(int index, int value) {
 		int[] newData = new int[data.length + 1];
-		for (int i = 0; i < index; ++i) {
-			newData[i] = data[i];
-		};
-		newData[index] = value;
-		for (int i = index+1; i < data.length+1; ++i) {
-			newData[i] = data[i-1];
+		for (int i = 0; i < newData.length; i++) {
+			if (i<index)
+				newData[i] = data[i];
+			else if (i==index)
+				newData[i] = value;
+			else 
+				newData[i] = data[i-1];
 		};
 		data = newData;
 		
@@ -59,12 +54,13 @@ public class ArrayElementAddDeleteExample {
 	
 	public static void addElement(int index, Person value) {
 		Person[] newData = new Person[people.length + 1];
-		for (int i = 0; i < index; ++i) {
-			newData[i] = people[i];
-		};
-		newData[index] = value;
-		for (int i = index+1; i < people.length+1; ++i) {
-			newData[i] = people[i-1];
+		for (int i = 0; i < newData.length; i++) {
+			if (i<index)
+				newData[i] = people[i];
+			else if (i==index)
+				newData[i] = value;
+			else
+				newData[i] = people[i-1];
 		};
 		people = newData;
 		
@@ -72,28 +68,16 @@ public class ArrayElementAddDeleteExample {
 	
 	public static void deleteObject(int index) {
 		Person[] newData = new Person[people.length - 1];
-		for (int i = 0; i < index; ++i) {
+		for (int i = 0; i < newData.length; i++) {
+			if (i<index)
 			newData[i] = people[i];
-		};
-		for (int i = index; i < people.length-1; ++i) {
+			else
 			newData[i] = people[i+1];
 		};
 		people = newData;
 		
 	}
-	
-//	public static void printArray() {
-//		System.out.println("#####################");
-//		for (int i=0; i < data.length; i++) {
-//			System.out.print( data[i] + " ");
-//		}
-//		System.out.println();
-//		for (int i=0; i < data.length; i++) {
-//			System.out.print( i + " ");
-//		}
-//		System.out.println("\n#####################\n");
-//	}
-	
+
 	public static void printArray() {
 		System.out.println("#####################");
 		for (int element : data) 
