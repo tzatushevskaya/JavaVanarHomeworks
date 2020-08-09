@@ -2,7 +2,7 @@ package main;
 
 public class ArrayCustomClassExampleApp {
 	
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		Dog[] dogs = new Dog[5];
 		dogs[0] = new Dog ("Shurik","Bulldog",1990, 10.0f);
 		dogs[1] = new Dog ("Laska","Layka",2010, 1.5f);

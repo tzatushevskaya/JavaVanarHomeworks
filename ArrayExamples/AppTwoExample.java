@@ -7,7 +7,7 @@ public class AppTwoExample {
 	
 	public static void main (String[] args) {
 		
-		try (Scanner in = new Scanner(System.in)) {
+		Scanner in = new Scanner(System.in);
 		
 		int[] values;
 		int size;
@@ -37,6 +37,5 @@ public class AppTwoExample {
 		}
 		
 	}
-  }
 
 }
