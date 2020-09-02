@@ -31,7 +31,7 @@ public class HwLsRsArray {
     }
 	
 	public static Integer[] pull(Integer[] array){
-        for(int i = 0; i > array.length-1; i++) {
+        for(int i = 0; i < array.length-1; i++) {
         array[i-1] = array[i+1];// first element of the array takes the value of an element after him 
         }
         array[array.length-1] = null; // last element becomes null
